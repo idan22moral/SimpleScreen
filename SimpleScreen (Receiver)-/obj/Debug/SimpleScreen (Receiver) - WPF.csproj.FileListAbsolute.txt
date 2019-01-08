@@ -1,0 +1,17 @@
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Receiver)\bin\Debug\SimpleScreen (Receiver).exe.config
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Receiver)\bin\Debug\SimpleScreen (Receiver).exe
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Receiver)\bin\Debug\SimpleScreen (Receiver).pdb
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Receiver)\obj\Debug\SimpleScreen (Receiver) - WPF.csprojResolveAssemblyReference.cache
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Receiver)\obj\Debug\MainWindow.baml
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Receiver)\obj\Debug\MainWindow.g.cs
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Receiver)\obj\Debug\App.g.cs
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Receiver)\obj\Debug\SimpleScreen (Receiver)_MarkupCompile.cache
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Receiver)\obj\Debug\SimpleScreen (Receiver)_MarkupCompile.lref
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Receiver)\obj\Debug\SimpleScreen (Receiver).g.resources
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Receiver)\obj\Debug\SimpleScreen__Receiver_.Properties.Resources.resources
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Receiver)\obj\Debug\SimpleScreen (Receiver) - WPF.csproj.GenerateResource.Cache
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Receiver)\obj\Debug\SimpleScreen (Receiver).exe
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Receiver)\obj\Debug\SimpleScreen (Receiver).pdb
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Receiver)\bin\Debug\Open.Nat.dll
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Receiver)\bin\Debug\Open.Nat.xml
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Receiver)\obj\Debug\SimpleScreen (Receiver) - WPF.csproj.CoreCompileInputs.cache

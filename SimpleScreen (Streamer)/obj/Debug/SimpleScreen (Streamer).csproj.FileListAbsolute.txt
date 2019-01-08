@@ -1,0 +1,18 @@
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\bin\Debug\SimpleScreen (Streamer).exe.config
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\bin\Debug\SimpleScreen (Streamer).exe
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\bin\Debug\SimpleScreen (Streamer).pdb
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Debug\MainWindow.g.cs
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Debug\App.g.cs
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Debug\SimpleScreen (Streamer)_MarkupCompile.cache
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Debug\SimpleScreen (Streamer)_MarkupCompile.lref
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Debug\MainWindow.baml
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Debug\SimpleScreen (Streamer).g.resources
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Debug\SimpleScreen__Streamer_.Properties.Resources.resources
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Debug\SimpleScreen (Streamer).csproj.GenerateResource.Cache
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Debug\SimpleScreen (Streamer).exe
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Debug\SimpleScreen (Streamer).pdb
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Debug\Simple Styles.baml
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Debug\App.baml
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\bin\Debug\Open.Nat.dll
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\bin\Debug\Open.Nat.xml
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Debug\SimpleScreen (Streamer).csproj.CoreCompileInputs.cache

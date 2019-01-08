@@ -1,0 +1,984 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Screna</name>
+    </assembly>
+    <members>
+        <member name="T:Screna.Audio.AudioFileWriter">
+            <summary>
+            Writes an Audio file.
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.AudioFileWriter.#ctor(System.IO.Stream,Screna.Audio.WaveFormat,System.Boolean)">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.Audio.AudioFileWriter"/>.
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.AudioFileWriter.#ctor(System.String,Screna.Audio.WaveFormat,System.Boolean)">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.Audio.AudioFileWriter"/>.
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.AudioFileWriter.#ctor(System.IO.Stream,Screna.Audio.IAudioEncoder)">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.Audio.AudioFileWriter"/>.
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.AudioFileWriter.#ctor(System.String,Screna.Audio.IAudioEncoder)">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.Audio.AudioFileWriter"/>.
+            </summary>
+        </member>
+        <member name="P:Screna.Audio.AudioFileWriter.Length">
+            <summary>
+            Number of bytes of audio in the data chunk
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.AudioFileWriter.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Writes to file.
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.AudioFileWriter.Flush">
+            <summary>
+            Writes all buffered data to file.
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.AudioFileWriter.UpdateHeader">
+            <summary>
+            Updates the header with file size information
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.AudioFileWriter.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:Screna.Audio.EncodedAudioProvider">
+            <summary>
+            Wraps an <see cref="T:Screna.Audio.IAudioEncoder"/> over an <see cref="T:Screna.Audio.IAudioProvider"/>.
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.EncodedAudioProvider.#ctor(Screna.Audio.IAudioProvider,Screna.Audio.IAudioEncoder)">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.Audio.EncodedAudioProvider"/>.
+            </summary>
+            <param name="AudioProvider">The <see cref="T:Screna.Audio.IAudioProvider"/> to wrap.</param>
+            <param name="AudioEncoder">The <see cref="T:Screna.Audio.IAudioEncoder"/> to use.</param>
+        </member>
+        <member name="M:Screna.Audio.EncodedAudioProvider.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="P:Screna.Audio.EncodedAudioProvider.WaveFormat">
+            <summary>
+            Gets the Recording WaveFormat.
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.EncodedAudioProvider.Start">
+            <summary>
+            Start Recording.
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.EncodedAudioProvider.Stop">
+            <summary>
+            Stop Recording.
+            </summary>
+        </member>
+        <member name="E:Screna.Audio.EncodedAudioProvider.DataAvailable">
+            <summary>
+            Indicates recorded data is available.
+            </summary>
+        </member>
+        <member name="E:Screna.Audio.EncodedAudioProvider.RecordingStopped">
+            <summary>
+            Indicates that all recorded data has now been received.
+            </summary>
+        </member>
+        <member name="T:Screna.Audio.IAudioProvider">
+            <summary>
+            Provides Recorded Audio.
+            </summary>
+        </member>
+        <member name="P:Screna.Audio.IAudioProvider.WaveFormat">
+            <summary>
+            Gets the Recording WaveFormat.
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.IAudioProvider.Start">
+            <summary>
+            Start Recording.
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.IAudioProvider.Stop">
+            <summary>
+            Stop Recording.
+            </summary>
+        </member>
+        <member name="E:Screna.Audio.IAudioProvider.DataAvailable">
+            <summary>
+            Indicates recorded data is available.
+            </summary>
+        </member>
+        <member name="E:Screna.Audio.IAudioProvider.RecordingStopped">
+            <summary>
+            Indicates that all recorded data has now been received.
+            </summary>
+        </member>
+        <member name="T:Screna.Audio.WaveFormatExtra">
+            <summary>
+            Represents a Wave file format with Extra data.
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.WaveFormatExtra.#ctor(System.Int32,System.Int32,System.Int32,System.Byte[])">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.Audio.WaveFormatExtra"/>.
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.WaveFormatExtra.Serialize(System.IO.BinaryWriter)">
+            <summary>
+            Writes this object to a stream
+            </summary>
+            <param name="Writer">the output stream</param>
+        </member>
+        <member name="T:Screna.Audio.WaveFormat">
+            <summary>
+            Represents a Wave file format
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.WaveFormat.#ctor">
+            <summary>
+            Creates a new PCM 44.1Khz stereo 16 bit format
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.WaveFormat.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Creates a new 16 bit wave format with the specified sample
+            rate and channel count
+            </summary>
+            <param name="SampleRate">Sample Rate</param>
+            <param name="Channels">Number of channels</param>
+        </member>
+        <member name="M:Screna.Audio.WaveFormat.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a new PCM format with the specified sample rate, bit depth and channels
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.WaveFormat.CreateIeeeFloatWaveFormat(System.Int32,System.Int32)">
+            <summary>
+            Creates a new 32 bit IEEE floating point wave format
+            </summary>
+            <param name="SampleRate">sample rate</param>
+            <param name="Channels">number of channels</param>
+        </member>
+        <member name="P:Screna.Audio.WaveFormat.Encoding">
+            <summary>
+            Returns the encoding type used
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.WaveFormat.Serialize(System.IO.BinaryWriter)">
+            <summary>
+            Writes this WaveFormat object to a stream
+            </summary>
+            <param name="Writer">the output stream</param>
+        </member>
+        <member name="P:Screna.Audio.WaveFormat.Channels">
+            <summary>
+            Returns the number of channels (1=mono,2=stereo etc)
+            </summary>
+        </member>
+        <member name="P:Screna.Audio.WaveFormat.SampleRate">
+            <summary>
+            Returns the sample rate (samples per second)
+            </summary>
+        </member>
+        <member name="P:Screna.Audio.WaveFormat.AverageBytesPerSecond">
+            <summary>
+            Returns the average number of bytes used per second
+            </summary>
+        </member>
+        <member name="P:Screna.Audio.WaveFormat.BlockAlign">
+            <summary>
+            Returns the block alignment
+            </summary>
+        </member>
+        <member name="P:Screna.Audio.WaveFormat.BitsPerSample">
+            <summary>
+            Returns the number of bits per sample (usually 16 or 32, sometimes 24 or 8)
+            Can be 0 for some codecs
+            </summary>
+        </member>
+        <member name="P:Screna.Audio.WaveFormat.ExtraSize">
+            <summary>
+            Returns the number of extra bytes used by this waveformat.
+            Often 0, except for compressed formats which store extra data after the WAVEFORMATEX header
+            </summary>
+        </member>
+        <member name="T:Screna.Audio.WaveFormatEncoding">
+            <summary>
+            WaveFormat Encoding
+            </summary>
+        </member>
+        <member name="F:Screna.Audio.WaveFormatEncoding.Unknown">
+            <summary>
+            Unknown.
+            </summary>
+        </member>
+        <member name="F:Screna.Audio.WaveFormatEncoding.Pcm">
+            <summary>
+            Pulse Code Modulation.
+            </summary>
+        </member>
+        <member name="F:Screna.Audio.WaveFormatEncoding.Float">
+            <summary>
+            IEEE Float.
+            </summary>
+        </member>
+        <member name="F:Screna.Audio.WaveFormatEncoding.Mp3">
+            <summary>
+            MPEG Layer 3 (MP3).
+            </summary>
+        </member>
+        <member name="F:Screna.Audio.WaveFormatEncoding.Extensible">
+            <summary>
+            Wave Format Extensible.
+            </summary>
+        </member>
+        <member name="T:Screna.Audio.IAudioFileWriter">
+            <summary>
+            Encodes Audio into an audio file.
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.IAudioFileWriter.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Writes to file.
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.IAudioFileWriter.Flush">
+            <summary>
+            Writes all buffered data to file.
+            </summary>
+        </member>
+        <member name="T:Screna.Audio.IAudioEncoder">
+            <summary>
+            Encodes Audio.
+            </summary>
+        </member>
+        <member name="P:Screna.Audio.IAudioEncoder.WaveFormat">
+            <summary>
+            Wave Format including Specific Data.
+            </summary>
+        </member>
+        <member name="P:Screna.Audio.IAudioEncoder.RequiresRiffHeader">
+            <summary>
+            Gets if RIFF header is needed when writing to a file.
+            </summary>
+        </member>
+        <member name="M:Screna.Audio.IAudioEncoder.GetMaxEncodedLength(System.Int32)">
+            <summary>
+            Gets the maximum number of bytes in encoded data for a given number of source bytes.
+            </summary>
+            <param name="SourceCount">Number of source bytes. Specify <c>0</c> for a flush buffer size.</param>
+            <seealso cref="M:Screna.Audio.IAudioEncoder.Encode(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32)"/>
+            <seealso cref="M:Screna.Audio.IAudioEncoder.Flush(System.Byte[],System.Int32)"/>
+        </member>
+        <member name="M:Screna.Audio.IAudioEncoder.Encode(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32)">
+            <summary>
+            Encodes block of audio data.
+            </summary>
+            <param name="Source">Buffer with audio data.</param>
+            <param name="SourceOffset">Offset to start reading <paramref name="Source"/>.</param>
+            <param name="SourceCount">Number of bytes to read from <paramref name="Source"/>.</param>
+            <param name="Destination">Buffer for encoded audio data.</param>
+            <param name="DestinationOffset">Offset to start writing to <paramref name="Destination"/>.</param>
+            <returns>The number of bytes written to <paramref name="Destination"/>.</returns>
+            <seealso cref="M:Screna.Audio.IAudioEncoder.GetMaxEncodedLength(System.Int32)"/>
+        </member>
+        <member name="M:Screna.Audio.IAudioEncoder.Flush(System.Byte[],System.Int32)">
+            <summary>
+            Flushes internal encoder buffers if any.
+            </summary>
+            <param name="Destination">Buffer for encoded audio data.</param>
+            <param name="DestinationOffset">Offset to start writing to <paramref name="Destination"/>.</param>
+            <returns>The number of bytes written to <paramref name="Destination"/>.</returns>
+            <seealso cref="M:Screna.Audio.IAudioEncoder.GetMaxEncodedLength(System.Int32)"/>
+        </member>
+        <member name="M:Screna.Audio.IAudioEncoder.EnsureBufferIsSufficient(System.Byte[]@,System.Int32)">
+            <summary>
+            Ensures that the buffer is big enough to hold the result of encoding <paramref name="SourceCount"/> bytes.
+            </summary>
+        </member>
+        <member name="T:Screna.DataAvailableEventArgs">
+            <summary>
+            Data Available Event Args.
+            </summary>
+        </member>
+        <member name="P:Screna.DataAvailableEventArgs.Buffer">
+            <summary>
+            Data Buffer.
+            </summary>
+        </member>
+        <member name="P:Screna.DataAvailableEventArgs.Length">
+            <summary>
+            Data Buffer Length.
+            </summary>
+        </member>
+        <member name="M:Screna.DataAvailableEventArgs.#ctor(System.Byte[],System.Int32)">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.DataAvailableEventArgs"/>.
+            </summary>
+        </member>
+        <member name="T:Screna.EndEventArgs">
+            <summary>
+            End Event Args.
+            </summary>
+        </member>
+        <member name="P:Screna.EndEventArgs.Error">
+            <summary>
+            Contains the Exception that occured... null if no error occured.
+            </summary>
+        </member>
+        <member name="M:Screna.EndEventArgs.#ctor(System.Exception)">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.EndEventArgs"/>.
+            </summary>
+            <param name="Error">The <see cref="T:System.Exception"/> that occured.</param>
+        </member>
+        <member name="T:Screna.Extensions">
+            <summary>
+            Collection of utility methods.
+            </summary>
+        </member>
+        <member name="M:Screna.Extensions.WriteToClipboard(System.Drawing.Bitmap,System.Boolean)">
+            <summary>
+            Writes a Bitmap to Clipboard while taking care of Transparency
+            </summary>
+        </member>
+        <member name="M:Screna.Extensions.CropEmptyEdges(System.Drawing.Bitmap,System.Drawing.Color)">
+            <summary>
+            Removes the Pixels on Edges matching TrimColor(default is Transparent) from the Image
+            </summary>
+        </member>
+        <member name="M:Screna.Extensions.Draw(Screna.IOverlay,System.Drawing.Image,System.Drawing.Point)">
+            <summary>
+            Draws an <see cref="T:Screna.IOverlay"/> over an <see cref="T:System.Drawing.Image"/>.
+            </summary>
+        </member>
+        <member name="M:Screna.Extensions.DifferentiateAlpha(System.Drawing.Bitmap,System.Drawing.Bitmap)">
+            <summary>
+            Creates a Transparent Bitmap from a combination of a Bitmap on a White Background and another on a Black Background
+            </summary>
+        </member>
+        <member name="T:Screna.CroppedImageProvider">
+            <summary>
+            Wraps up another <see cref="T:Screna.IImageProvider"/> to provide Cropped images.
+            </summary>
+        </member>
+        <member name="M:Screna.CroppedImageProvider.#ctor(Screna.IImageProvider,System.Drawing.Rectangle)">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.CroppedImageProvider"/>.
+            </summary>
+            <param name="Source">The Source <see cref="T:Screna.IImageProvider"/>.</param>
+            <param name="CropRectangle">The <see cref="T:System.Drawing.Rectangle"/> used to determine the region to crop.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="Source"/> is null.</exception>
+            <exception cref="T:System.ArgumentException"><paramref name="CropRectangle"/> extends boutside the images returned by <paramref name="Source"/>.</exception>
+        </member>
+        <member name="M:Screna.CroppedImageProvider.Dispose">
+            <summary>
+            The Source <see cref="T:Screna.IImageProvider"/> is not freed here.
+            </summary>
+        </member>
+        <member name="M:Screna.CroppedImageProvider.Capture">
+            <summary>
+            Capture an image.
+            </summary>
+        </member>
+        <member name="P:Screna.CroppedImageProvider.Height">
+            <summary>
+            Height of Captured image.
+            </summary>
+        </member>
+        <member name="P:Screna.CroppedImageProvider.Width">
+            <summary>
+            Width of Captured image.
+            </summary>
+        </member>
+        <member name="T:Screna.OverlayedImageProvider">
+            <summary>
+            Applies Overlays on an <see cref="T:Screna.IImageProvider"/>.
+            </summary>
+        </member>
+        <member name="M:Screna.OverlayedImageProvider.#ctor(Screna.IImageProvider,System.Drawing.Point,Screna.IOverlay[])">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.OverlayedImageProvider"/>.
+            </summary>
+            <param name="ImageProvider">The <see cref="T:Screna.IImageProvider"/> to apply the Overlays on.</param>
+            <param name="Overlays">Array of <see cref="T:Screna.IOverlay"/>(s) to apply.</param>
+            <param name="Offset">The Offset of the Captured region.</param>
+        </member>
+        <member name="M:Screna.OverlayedImageProvider.#ctor(Screna.IImageProvider,System.Func{System.Drawing.Point},Screna.IOverlay[])">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.OverlayedImageProvider"/>.
+            </summary>
+            <param name="ImageProvider">The <see cref="T:Screna.IImageProvider"/> to apply the Overlays on.</param>
+            <param name="Overlays">Array of <see cref="T:Screna.IOverlay"/>(s) to apply.</param>
+            <param name="Offset">Function returning Offset of the Captured region.</param>
+        </member>
+        <member name="M:Screna.OverlayedImageProvider.Capture">
+            <summary>
+            Captures an Image.
+            </summary>
+        </member>
+        <member name="P:Screna.OverlayedImageProvider.Height">
+            <summary>
+            Height of Captured image.
+            </summary>
+        </member>
+        <member name="P:Screna.OverlayedImageProvider.Width">
+            <summary>
+            Width of Captured image.
+            </summary>
+        </member>
+        <member name="M:Screna.OverlayedImageProvider.Dispose">
+            <summary>
+            Frees all resources used by this instance.
+            </summary>
+        </member>
+        <member name="T:Screna.RotatedImageProvider">
+            <summary>
+            Wraps up another <see cref="T:Screna.IImageProvider"/> to provide Rotated and/or Flipped images.
+            </summary>
+        </member>
+        <member name="M:Screna.RotatedImageProvider.#ctor(Screna.IImageProvider,System.Drawing.RotateFlipType)">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.RotatedImageProvider"/>.
+            </summary>
+            <param name="Source">The source <see cref="T:Screna.IImageProvider"/>.</param>
+            <param name="RotateFlipType">Rotation and/or Flipping options.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="Source"/> is null.</exception>
+        </member>
+        <member name="M:Screna.RotatedImageProvider.Capture">
+            <summary>
+            Capture an image.
+            </summary>
+        </member>
+        <member name="P:Screna.RotatedImageProvider.Height">
+            <summary>
+            Height of Captured image.
+            </summary>
+        </member>
+        <member name="P:Screna.RotatedImageProvider.Width">
+            <summary>
+            Width of Captured image.
+            </summary>
+        </member>
+        <member name="M:Screna.RotatedImageProvider.Dispose">
+            <summary>
+            The Source <see cref="T:Screna.IImageProvider"/> is not freed here.
+            </summary>
+        </member>
+        <member name="T:Screna.IRecorder">
+            <summary>
+            Carries out the process of recording Audio and/or Video.
+            </summary>
+        </member>
+        <member name="M:Screna.IRecorder.Start">
+            <summary>
+            Start Recording.
+            </summary>
+        </member>
+        <member name="M:Screna.IRecorder.Stop">
+            <summary>
+            Stop Recording.
+            </summary>
+        </member>
+        <member name="T:Screna.Recorder">
+            <summary>
+            Default implementation of <see cref="T:Screna.IRecorder"/> interface.
+            Can output to <see cref="T:Screna.IVideoFileWriter"/> or <see cref="T:Screna.Audio.IAudioFileWriter"/>.
+            </summary>
+        </member>
+        <member name="M:Screna.Recorder.#ctor(Screna.IVideoFileWriter,Screna.IImageProvider,System.Int32,Screna.Audio.IAudioProvider)">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.IRecorder"/> writing to <see cref="T:Screna.IVideoFileWriter"/>.
+            </summary>
+            <param name="VideoWriter">The <see cref="T:Screna.IVideoFileWriter"/> to write to.</param>
+            <param name="ImageProvider">The image source.</param>
+            <param name="FrameRate">Video Frame Rate.</param>
+            <param name="AudioProvider">The audio source. null = no audio.</param>
+        </member>
+        <member name="M:Screna.Recorder.#ctor(Screna.Audio.IAudioFileWriter,Screna.Audio.IAudioProvider)">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.IRecorder"/> writing to <see cref="T:Screna.Audio.IAudioFileWriter"/>.
+            </summary>
+            <param name="AudioWriter">The <see cref="T:Screna.Audio.IAudioFileWriter"/> to write to.</param>
+            <param name="AudioProvider">The audio source.</param>
+        </member>
+        <member name="M:Screna.Recorder.Dispose">
+            <summary>
+            Frees all resources used by this instance.
+            </summary>
+        </member>
+        <member name="M:Screna.Recorder.Start">
+            <summary>
+            Start Recording.
+            </summary>
+        </member>
+        <member name="M:Screna.Recorder.Stop">
+            <summary>
+            Stop Recording.
+            </summary>
+        </member>
+        <member name="T:Screna.GifWriter">
+            <summary>
+            Creates a GIF using .Net GIF encoding and additional animation headers.
+            </summary>
+        </member>
+        <member name="M:Screna.GifWriter.#ctor(System.IO.Stream,System.Int32,System.Int32)">
+            <summary>
+            Creates a new instance of GifWriter.
+            </summary>
+            <param name="OutStream">The <see cref="T:System.IO.Stream"/> to output the Gif to.</param>
+            <param name="FrameRate">Fame Rate.</param>
+            <param name="Repeat">No of times the Gif should repeat... -1 to repeat indefinitely.</param>
+        </member>
+        <member name="M:Screna.GifWriter.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+            Creates a new instance of GifWriter.
+            </summary>
+            <param name="FileName">The path to the file to output the Gif to.</param>
+            <param name="DefaultFrameDelay">Default Delay between consecutive frames... FrameRate = 1000 / DefaultFrameDelay.</param>
+            <param name="Repeat">No of times the Gif should repeat... -1 to repeat indefinitely.</param>
+        </member>
+        <member name="M:Screna.GifWriter.WriteAudio(System.Byte[],System.Int32)">
+            <summary>
+            <see cref="T:Screna.GifWriter"/> does not Support Audio.
+            </summary>
+        </member>
+        <member name="M:Screna.GifWriter.WriteFrame(System.Drawing.Image,System.Int32)">
+            <summary>
+            Adds a frame to this animation.
+            </summary>
+            <param name="Image">The image to add</param>
+            <param name="Delay">Delay in Milliseconds between this and last frame.</param>
+        </member>
+        <member name="M:Screna.GifWriter.WriteFrame(System.Drawing.Bitmap)">
+            <summary>
+            Writes a Image frame.
+            </summary>
+            <param name="Image">Image frame to write.</param>
+        </member>
+        <member name="P:Screna.GifWriter.SupportsAudio">
+            <summary>
+            <see cref="T:Screna.GifWriter"/> does not support Audio.
+            </summary>
+        </member>
+        <member name="M:Screna.GifWriter.Dispose">
+            <summary>
+            Frees all resources used by this object.
+            </summary>
+        </member>
+        <member name="T:Screna.ImageProviderBase">
+            <summary>
+            An abstract implementation of <see cref="T:Screna.IImageProvider"/> interface.
+            </summary>
+        </member>
+        <member name="M:Screna.ImageProviderBase.#ctor(System.Drawing.Rectangle)">
+            <summary>
+            Constructor for <see cref="T:Screna.ImageProviderBase"/>.
+            </summary>
+            <param name="Rectangle">A <see cref="T:System.Drawing.Rectangle"/> representing the captured region.</param>
+        </member>
+        <member name="M:Screna.ImageProviderBase.Capture">
+            <summary>
+            Captures an Image.
+            </summary>
+        </member>
+        <member name="M:Screna.ImageProviderBase.OnCapture(System.Drawing.Graphics)">
+            <summary>
+            Implemented by derived classes for the actual capture process.
+            </summary>
+        </member>
+        <member name="P:Screna.ImageProviderBase.Height">
+            <summary>
+            Height of Captured image.
+            </summary>
+        </member>
+        <member name="P:Screna.ImageProviderBase.Width">
+            <summary>
+            Width of Captured image.
+            </summary>
+        </member>
+        <member name="M:Screna.ImageProviderBase.Dispose">
+            <summary>
+            Frees all resources used by this instance.
+            </summary>
+        </member>
+        <member name="T:Screna.RegionProvider">
+            <summary>
+            Captures the Region specified by a Rectangle.
+            </summary>
+        </member>
+        <member name="M:Screna.RegionProvider.#ctor(System.Drawing.Rectangle)">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.RegionProvider"/>.
+            </summary>
+            <param name="Region">Region to Capture.</param>
+        </member>
+        <member name="M:Screna.RegionProvider.OnCapture(System.Drawing.Graphics)">
+            <summary>
+            Capture an image.
+            </summary>
+        </member>
+        <member name="T:Screna.IVideoFileWriter">
+            <summary>
+            Creates a video from individual frames and writes them to a file.
+            </summary>
+        </member>
+        <member name="M:Screna.IVideoFileWriter.WriteFrame(System.Drawing.Bitmap)">
+            <summary>
+            Writes an Image frame.
+            </summary>
+            <param name="Image">The Image frame to write.</param>
+        </member>
+        <member name="P:Screna.IVideoFileWriter.SupportsAudio">
+            <summary>
+            Gets whether audio is supported.
+            </summary>
+        </member>
+        <member name="M:Screna.IVideoFileWriter.WriteAudio(System.Byte[],System.Int32)">
+            <summary>
+            Write audio block to Audio Stream.
+            </summary>
+            <param name="Buffer">Buffer containing audio data.</param>
+            <param name="Length">Length of audio data in bytes.</param>
+        </member>
+        <member name="T:Screna.IImageProvider">
+            <summary>
+            Provides images.
+            Must provide in <see cref="F:System.Drawing.Imaging.PixelFormat.Format32bppRgb"/>
+            </summary>
+        </member>
+        <member name="M:Screna.IImageProvider.Capture">
+            <summary>
+            Capture an image.
+            </summary>
+        </member>
+        <member name="P:Screna.IImageProvider.Height">
+            <summary>
+            Height of Captured image.
+            </summary>
+        </member>
+        <member name="P:Screna.IImageProvider.Width">
+            <summary>
+            Width of Captured image.
+            </summary>
+        </member>
+        <member name="T:Screna.ScreenProvider">
+            <summary>
+            Capture a Specific Screen.
+            </summary>
+        </member>
+        <member name="M:Screna.ScreenProvider.#ctor(System.Windows.Forms.Screen)">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.ScreenProvider"/>.
+            </summary>
+            <param name="Screen">The Screen to Capture.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="Screen"/> is null.</exception>
+        </member>
+        <member name="M:Screna.ScreenProvider.OnCapture(System.Drawing.Graphics)">
+            <summary>
+            Capture Frame.
+            </summary>
+        </member>
+        <member name="T:Screna.WindowProvider">
+            <summary>
+            Captures the specified window which can change dynamically. 
+            The captured image is of the size of the whole desktop to accomodate any change in the Window.
+            </summary>
+        </member>
+        <member name="P:Screna.WindowProvider.DesktopRectangle">
+            <summary>
+            A <see cref="T:System.Drawing.Rectangle"/> representing the entire Desktop.
+            </summary>
+        </member>
+        <member name="M:Screna.WindowProvider.#ctor(Screna.Window,System.Drawing.Color)">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.WindowProvider"/>.
+            </summary>
+            <param name="Window">The Window to Capture.</param>
+            <param name="BackgroundColor"><see cref="T:System.Drawing.Color"/> to fill blank background.</param>
+        </member>
+        <member name="M:Screna.WindowProvider.#ctor(System.Func{Screna.Window},System.Drawing.Color)">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.WindowProvider"/>.
+            </summary>
+            <param name="WindowFunction">A Function returning the Window to Capture.</param>
+            <param name="BackgroundColor"><see cref="T:System.Drawing.Color"/> to fill blank background.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="WindowFunction"/> is null.</exception>
+        </member>
+        <member name="M:Screna.WindowProvider.OnCapture(System.Drawing.Graphics)">
+            <summary>
+            Capture Image.
+            </summary>
+        </member>
+        <member name="T:Screna.MouseCursor">
+            <summary>
+            Draws the MouseCursor on an Image
+            </summary>
+        </member>
+        <member name="M:Screna.MouseCursor.#ctor(System.Boolean)">
+            <summary>
+            Create a new instance of <see cref="T:Screna.MouseCursor"/>.
+            </summary>
+            <param name="Include">Whether to include Mouse Cursor. Setting this to false bypasses this Overlay.</param>
+        </member>
+        <member name="P:Screna.MouseCursor.CursorPosition">
+            <summary>
+            Gets the Current Mouse Cursor Position.
+            </summary>
+        </member>
+        <member name="P:Screna.MouseCursor.Include">
+            <summary>
+            Gets or Sets whether to include Mouse Cursor. Setting this to false bypasses this Overlay.
+            </summary>
+        </member>
+        <member name="M:Screna.MouseCursor.Draw(System.Drawing.Graphics,System.Drawing.Point)">
+            <summary>
+            Draws this overlay.
+            </summary>
+            <param name="g">A <see cref="T:System.Drawing.Graphics"/> object to draw upon.</param>
+            <param name="Offset">Offset from Origin of the Captured Area.</param>
+        </member>
+        <member name="M:Screna.MouseCursor.Dispose">
+            <summary>
+            Frees all resources used by this object.
+            </summary>
+        </member>
+        <member name="T:Screna.Window">
+            <summary>
+            Minimal representation of a Window.
+            </summary>
+        </member>
+        <member name="M:Screna.Window.#ctor(System.IntPtr)">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.Window"/>.
+            </summary>
+            <param name="Handle">The Window Handle.</param>
+        </member>
+        <member name="P:Screna.Window.IsVisible">
+            <summary>
+            Gets whether the Window is Visible.
+            </summary>
+        </member>
+        <member name="P:Screna.Window.Handle">
+            <summary>
+            Gets the Window Handle.
+            </summary>
+        </member>
+        <member name="P:Screna.Window.Title">
+            <summary>
+            Gets the Window Title.
+            </summary>
+        </member>
+        <member name="P:Screna.Window.DesktopWindow">
+            <summary>
+            Gets the Desktop Window.
+            </summary>
+        </member>
+        <member name="P:Screna.Window.ForegroundWindow">
+            <summary>
+            Gets the Foreground Window.
+            </summary>
+        </member>
+        <member name="P:Screna.Window.Taskbar">
+            <summary>
+            Gets the Taskbar Window - Shell_TrayWnd.
+            </summary>
+        </member>
+        <member name="M:Screna.Window.Enumerate">
+            <summary>
+            Enumerates all Windows.
+            </summary>
+        </member>
+        <member name="M:Screna.Window.EnumerateVisible">
+            <summary>
+            Enumerates all visible windows with a Title.
+            </summary>
+        </member>
+        <member name="M:Screna.Window.ToString">
+            <summary>
+            Returns the Widow Title.
+            </summary>
+        </member>
+        <member name="M:Screna.Window.Equals(System.Object)">
+            <summary>
+            Determines whether the specified object is equal to the current object.
+            </summary>
+            <returns>
+            true if the specified object  is equal to the current object; otherwise, false.
+            </returns>
+            <param name="obj">The object to compare with the current object. </param>
+        </member>
+        <member name="M:Screna.Window.GetHashCode">
+            <summary>
+            Serves as the default hash function. 
+            </summary>
+            <returns>
+            A hash code for the current object.
+            </returns>
+        </member>
+        <member name="M:Screna.Window.op_Equality(Screna.Window,Screna.Window)">
+            <summary>
+            Checks whether two <see cref="T:Screna.Window"/> instances are equal.
+            </summary>
+        </member>
+        <member name="M:Screna.Window.op_Inequality(Screna.Window,Screna.Window)">
+            <summary>
+            Checks whether two <see cref="T:Screna.Window"/> instances are not equal.
+            </summary>
+        </member>
+        <member name="T:Screna.IOverlay">
+            <summary>
+            Draws over a Capured image.
+            </summary>
+        </member>
+        <member name="M:Screna.IOverlay.Draw(System.Drawing.Graphics,System.Drawing.Point)">
+            <summary>
+            Draws the Overlay.
+            </summary>
+            <param name="g">The <see cref="T:System.Drawing.Graphics"/> object to draw on.</param>
+            <param name="Offset">The Offset of the captured region.</param>
+        </member>
+        <member name="T:Screna.UnconstrainedFrameRateGifRecorder">
+            <summary>
+            An <see cref="T:Screna.IRecorder"/> which records to a Gif using Delay for each frame instead of Frame Rate.
+            </summary>
+        </member>
+        <member name="M:Screna.UnconstrainedFrameRateGifRecorder.#ctor(Screna.GifWriter,Screna.IImageProvider)">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.UnconstrainedFrameRateGifRecorder"/>.
+            </summary>
+            <param name="Encoder">The <see cref="T:Screna.GifWriter"/> to write into.</param>
+            <param name="ImageProvider">The <see cref="T:Screna.IImageProvider"/> providing the individual frames.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="Encoder"/> or <paramref name="ImageProvider"/> is null.</exception>
+        </member>
+        <member name="M:Screna.UnconstrainedFrameRateGifRecorder.Start">
+            <summary>
+            Start recording.
+            </summary>
+        </member>
+        <member name="M:Screna.UnconstrainedFrameRateGifRecorder.Dispose">
+            <summary>
+            Frees resources.
+            </summary>
+        </member>
+        <member name="M:Screna.UnconstrainedFrameRateGifRecorder.Stop">
+            <summary>
+            Override this method with the code to pause recording.
+            </summary>
+        </member>
+        <member name="T:Screna.ResizedImageProvider">
+            <summary>
+            Wraps up another <see cref="T:Screna.IImageProvider"/> to provide images resied to required dimensions.
+            </summary>
+        </member>
+        <member name="M:Screna.ResizedImageProvider.#ctor(Screna.IImageProvider,System.Int32,System.Int32,System.Drawing.Color)">
+            <summary>
+            Creates a new instance of <see cref="T:Screna.ResizedImageProvider"/>.
+            </summary>
+            <param name="ImageSource">The Source <see cref="T:Screna.IImageProvider"/>.</param>
+            <param name="TargetWidth">Target Width.</param>
+            <param name="TargetHeight">Target Height.</param>
+            <param name="BackgroundColor">Background Color to fill any left space.</param>
+        </member>
+        <member name="M:Screna.ResizedImageProvider.Capture">
+            <summary>
+            Capture an image.
+            </summary>
+        </member>
+        <member name="P:Screna.ResizedImageProvider.Height">
+            <summary>
+            Height of Captured image.
+            </summary>
+        </member>
+        <member name="P:Screna.ResizedImageProvider.Width">
+            <summary>
+            Width of Captured image.
+            </summary>
+        </member>
+        <member name="M:Screna.ResizedImageProvider.Dispose">
+            <summary>
+            The Source <see cref="T:Screna.IImageProvider"/> is not freed here.
+            </summary>
+        </member>
+        <member name="T:Screna.ScreenShot">
+            <summary>
+            Contains methods for taking ScreenShots
+            </summary>
+        </member>
+        <member name="M:Screna.ScreenShot.Capture(System.Windows.Forms.Screen,System.Boolean,System.Boolean)">
+            <summary>
+            Captures a Specific <see cref="T:System.Windows.Forms.Screen"/>.
+            </summary>
+            <param name="Screen">The <see cref="T:System.Windows.Forms.Screen"/> to Capture.</param>
+            <param name="IncludeCursor">Whether to include the Mouse Cursor.</param>
+            <param name="Managed">Whether to use Managed or Unmanaged Procedure.</param>
+            <returns>The Captured Image.</returns>
+        </member>
+        <member name="M:Screna.ScreenShot.Capture(Screna.Window,System.Boolean)">
+            <summary>
+            Captures a Specific Window.
+            </summary>
+            <param name="Window">The <see cref="T:Screna.Window"/> to Capture</param>
+            <param name="IncludeCursor">Whether to include the Mouse Cursor.</param>
+            <returns>The Captured Image.</returns>
+        </member>
+        <member name="M:Screna.ScreenShot.Capture(System.Windows.Forms.Form,System.Boolean)">
+            <summary>
+            Captures a Specific <see cref="T:System.Windows.Forms.Form"/>.
+            </summary>
+            <param name="Form">The <see cref="T:System.Windows.Forms.Form"/> to Capture</param>
+            <param name="IncludeCursor">Whether to include the Mouse Cursor.</param>
+            <returns>The Captured Image.</returns>
+        </member>
+        <member name="M:Screna.ScreenShot.Capture(System.Boolean,System.Boolean)">
+            <summary>
+            Captures the entire Desktop.
+            </summary>
+            <param name="IncludeCursor">Whether to include the Mouse Cursor.</param>
+            <param name="Managed">Whether to use Managed or Unmanaged Procedure.</param>
+            <returns>The Captured Image.</returns>
+        </member>
+        <member name="M:Screna.ScreenShot.CaptureTransparent(Screna.Window,System.Boolean)">
+            <summary>
+            Capture transparent Screenshot of a Window.
+            </summary>
+            <param name="Window">The <see cref="T:Screna.Window"/> to Capture.</param>
+            <param name="IncludeCursor">Whether to include Mouse Cursor.</param>
+        </member>
+        <member name="M:Screna.ScreenShot.CaptureTransparent(Screna.Window,System.Boolean,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            Capture transparent Screenshot of a Window.
+            </summary>
+            <param name="Window">The <see cref="T:Screna.Window"/> to Capture.</param>
+            <param name="IncludeCursor">Whether to include Mouse Cursor.</param>
+            <param name="DoResize">
+            Whether to Capture at another size.
+            The Window is sized to the specified Resize Dimensions, Captured and resized back to original size.
+            </param>
+            <param name="ResizeWidth">Capture Width.</param>
+            <param name="ResizeHeight">Capture Height.</param>
+        </member>
+        <member name="M:Screna.ScreenShot.Capture(System.Drawing.Rectangle,System.Boolean,System.Boolean)">
+            <summary>
+            Captures a Specific Region.
+            </summary>
+            <param name="Region">A <see cref="T:System.Drawing.Rectangle"/> specifying the Region to Capture.</param>
+            <param name="IncludeCursor">Whether to include the Mouse Cursor.</param>
+            <param name="Managed">Whether to use Managed or Unmanaged Procedure.</param>
+            <returns>The Captured Image.</returns>
+        </member>
+    </members>
+</doc>

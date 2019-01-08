@@ -1,0 +1,21 @@
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\bin\Release\SimpleScreen (Streamer).exe.config
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\bin\Release\SimpleScreen (Streamer).exe
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\bin\Release\SimpleScreen (Streamer).pdb
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Release\Simple Styles.baml
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Release\MainWindow.g.cs
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Release\App.g.cs
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Release\SimpleScreen (Streamer)_MarkupCompile.cache
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Release\SimpleScreen (Streamer)_MarkupCompile.lref
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Release\App.baml
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Release\MainWindow.baml
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Release\SimpleScreen (Streamer).g.resources
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Release\SimpleScreen__Streamer_.Properties.Resources.resources
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Release\SimpleScreen (Streamer).csproj.GenerateResource.Cache
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Release\SimpleScreen (Streamer).exe
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Release\SimpleScreen (Streamer).pdb
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\bin\Release\Open.Nat.dll
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\bin\Release\Open.Nat.xml
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Release\SimpleScreen (Streamer).csproj.CoreCompileInputs.cache
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\bin\Release\Screna.dll
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\bin\Release\Screna.xml
+C:\Users\idan\Desktop\SimpleScreen\SimpleScreen (Streamer)\obj\Release\SimpleScreen (Streamer).csprojResolveAssemblyReference.cache
